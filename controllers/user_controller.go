@@ -27,7 +27,6 @@ func (c *UserController) GetAllUsers(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, gin.H{"users": users})
 }
 
-// GetUserByID - Mendapatkan pengguna berdasarkan ID
 func (c *UserController) GetUserByID(ctx *gin.Context) {
 	id, err := strconv.Atoi(ctx.Param("id"))
 	if err != nil {
@@ -44,7 +43,6 @@ func (c *UserController) GetUserByID(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, gin.H{"user": user})
 }
 
-// UpdateUser - Memperbarui data pengguna
 func (c *UserController) UpdateUser(ctx *gin.Context) {
 	id, err := strconv.Atoi(ctx.Param("id"))
 	if err != nil {
@@ -67,7 +65,6 @@ func (c *UserController) UpdateUser(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, gin.H{"message": "User updated successfully"})
 }
 
-// DeleteUser - Menghapus pengguna berdasarkan ID
 func (c *UserController) DeleteUser(ctx *gin.Context) {
 	id, err := strconv.Atoi(ctx.Param("id"))
 	if err != nil {

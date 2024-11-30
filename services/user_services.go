@@ -25,7 +25,6 @@ func (s *UserService) UpdateUser(user *models.User) error {
 	return s.UserRepository.UpdateUser(user)
 }
 
-// DeleteUser - Menghapus pengguna
 func (s *UserService) DeleteUser(id int) error {
 	user, err := s.UserRepository.GetUserByID(uint(id))
 	if err != nil {
